@@ -1,12 +1,11 @@
 extern crate cc;
-extern crate bindgen;
+//extern crate bindgen;
 
 use std::path::PathBuf;
 
 fn main() {
 //  println!("cargo:rustc-link-lib=static=stdc++");
 //  println!("cargo:rustc-link-lib=gslcblas");
-  println!("cargo:rustc-link-lib=bz2");
 
 
   cc::Build::new()
@@ -28,15 +27,16 @@ fn main() {
     .compile("librsnowboywrapper.a");
 
 
-  let bindings = bindgen::Builder::default()
-    .header("rsnowboywrapper/rsnowboy.h")
-    .enable_cxx_namespaces()
-    .layout_tests(false)
-    .opaque_type("std::.*")
-    .generate()
-    .expect("Unable to generate bindings");
-
-  bindings
-    .write_to_file(PathBuf::from("src/rawrsnoboy.rs").as_path())
-    .expect("Couldn't write bindings!");
+//  println!("cargo:rustc-link-lib=bz2");
+//  let bindings = bindgen::Builder::default()
+//    .header("rsnowboywrapper/rsnowboy.h")
+//    .enable_cxx_namespaces()
+//    .layout_tests(false)
+//    .opaque_type("std::.*")
+//    .generate()
+//    .expect("Unable to generate bindings");
+//
+//  bindings
+//    .write_to_file(PathBuf::from("src/rawrsnoboy.rs").as_path())
+//    .expect("Couldn't write bindings!");
 }

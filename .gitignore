@@ -13,6 +13,5 @@ Cargo.lock
 .idea
 *.iml
 
-rawrsnoboy.rs
-
+# rawrsnoboy.rs
 
