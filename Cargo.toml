@@ -1,0 +1,30 @@
+[package]
+name = "rsnowboy"
+version = "0.1.0"
+authors = ["fewensa <fewensa@protonmail.com>"]
+description = "Snowboy for rust"
+repository = "https://github.com/fewensa/rsnowboy"
+keywords = ["snowboy"]
+categories = ["api-bindings"]
+include = [
+  "Cargo.toml",
+  "**/*.rs",
+  "README.md",
+  "LICENSE"
+]
+license = "MIT"
+readme = "README.md"
+edition = "2018"
+
+build = "build.rs"
+
+
+
+[dependencies]
+
+[build-dependencies]
+cc = "1.0"
+bindgen = "0.49.0"
+
+
+
