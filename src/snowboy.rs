@@ -7,6 +7,9 @@ pub struct SnowboyDetect {
   rsnowboy_detect: *mut rsnowboy::RSnowboyDetect
 }
 
+unsafe impl Send for SnowboyDetect {}
+unsafe impl Sync for SnowboyDetect {}
+
 impl SnowboyDetect {
   pub fn new<S>(resource_filename: S, model_str: S) -> Self where S: AsRef<str> {
     unsafe {
