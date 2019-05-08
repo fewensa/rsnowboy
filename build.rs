@@ -7,7 +7,7 @@ fn main() {
 //  println!("cargo:rustc-link-lib=static=stdc++");
 //  println!("cargo:rustc-link-lib=gslcblas");
 
-
+//// if want build dependency for lib, release this comment
 //  cc::Build::new()
 //    .cpp(true)
 //    .file("rsnowboywrapper/rsnowboy.cpp")
@@ -26,7 +26,7 @@ fn main() {
 //    .flag("-O3")
 //    .compile("librsnowboywrapper.a");
 
-
+//// if you want generate rust code everytime, release this comment.
 //  println!("cargo:rustc-link-lib=bz2");
 //  let bindings = bindgen::Builder::default()
 //    .header("rsnowboywrapper/rsnowboy.h")

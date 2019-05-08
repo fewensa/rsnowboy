@@ -2,7 +2,7 @@
 name = "rsnowboy"
 version = "0.1.0"
 authors = ["fewensa <fewensa@protonmail.com>"]
-description = "Snowboy for rust"
+description = "Snowboy wrapper for rust"
 repository = "https://github.com/fewensa/rsnowboy"
 keywords = ["snowboy"]
 categories = ["api-bindings"]
