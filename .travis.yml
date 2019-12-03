@@ -15,7 +15,6 @@ jobs:
       script:
         - sudo apt-get install -y libgsl-dev
         - cargo run --example simple
-        - cargo package
     - stage: publish
       name: Publish rtdlib to crates.io
       script:
