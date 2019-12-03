@@ -11,6 +11,22 @@ This repo is snowboy wrapper for rust.
 
 The more document you can see [snowboy](https://github.com/Kitt-AI/snowboy) and [kitt.ai](https://snowboy.kitt.ai)
 
+# Usage
+
+```toml
+[dependencies]
+rsnowboy = { version = "0.1", git = "https://github.com/fewensa/rsnowboy" }
+```
+
+## crates.io
+
+Because crates.io has a [limitation](https://doc.rust-lang.org/cargo/reference/publishing.html#packaging-a-crate)
+
+>  crates.io currently has a 10MB size limit on the .crate file.
+
+
+So now the new version isn't publish to crates.io. The old version (0.1.0) is also can be use. but not compile itself.
+
 
 ## Examples
 
