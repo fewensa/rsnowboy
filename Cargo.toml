@@ -12,7 +12,8 @@ include = [
   "README.md",
   "lib",
   "rsnowboywrapper",
-  "LICENSE"
+  "LICENSE-MIT",
+  "LICENSE-APACHE"
 ]
 license = "MIT"
 readme = "README.md"
