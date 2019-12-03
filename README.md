@@ -92,6 +92,9 @@ fn voice() -> Vec<i16> {
 ```
 
 
+# Notice
+
+Because snowboy dependency gsl, so you need install [libgsl](https://www.gnu.org/software/gsl/) to your system
 
 
 
