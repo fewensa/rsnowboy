@@ -1,7 +1,7 @@
 rsnowboy
 ===
 
-[![Build Status](https://drone.0u0.me/api/badges/fewensa/rsnowboy/status.svg)](https://drone.0u0.me/fewensa/rsnowboy)
+[![Build Status](https://api.travis-ci.org/fewensa/rsnowboy.svg)](https://drone.0u0.me/fewensa/rsnowboy)
 
 
 This repo is snowboy wrapper for rust.
