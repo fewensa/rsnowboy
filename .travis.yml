@@ -1,0 +1,23 @@
+language: rust
+
+rust:
+  - stable
+
+stages:
+  - usually
+  - name: publish
+    if: tag IS present
+
+jobs:
+  include:
+    - stage: usually
+      name: Package rsnowboy
+      script:
+        - sudo apt-get install liboctave-dev
+        - cargo run --example simple
+        - cargo package
+    - stage: publish
+      name: Publish rtdlib to crates.io
+      script:
+        - cargo login $CRATES_TOKEN
+        - cargo publish

@@ -1,5 +1,6 @@
 ---
 kind: pipeline
+type: docker
 name: default
 
 steps:
@@ -43,47 +44,3 @@ volumes:
   - name: git_config
     host:
       path: /data/mount/git/.gitconfig
-
----
-kind: pipeline
-name: publish
-
-steps:
-  - name: publish
-    image: rust:1.33-slim
-    privileged: true
-    volumes:
-      - name: cargo
-        path: /root/.cargo
-    commands:
-      - cargo test -- --nocapture --exact
-      - sh -f /root/.cargo/credentials
-      - cargo publish
-
-volumes:
-  - name: cargo
-    host:
-      path: /data/mount/cargo
-
-trigger:
-  #  branch:
-  #    - master
-  event:
-    - tag
-
-
----
-kind: pipeline
-name: build
-
-steps:
-  - name: build
-    image: rust:1.33-slim
-    privileged: true
-    commands:
-      - cargo test -- --nocapture --exact
-      - cargo package
-
-trigger:
-  branch:
-    - master
