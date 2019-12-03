@@ -3,7 +3,7 @@
 
 //use std::path::PathBuf;
 use std::env;
-use std::process::Command;
+//use std::process::Command;
 
 fn get_lib_folder(arch_sub: &str, os: &str, abi: &str) -> Result<&'static str, String> {
   match os {
@@ -27,7 +27,7 @@ fn get_lib_folder(arch_sub: &str, os: &str, abi: &str) -> Result<&'static str, S
             "armv6" | "armv7" => {Ok("rpi")},
             other_arch => {
               Err(format!("architecture '{}' not supported for Linux", other_arch))
-            } 
+            }
           }
         }
       }
@@ -47,7 +47,7 @@ fn main() {
   match env::var("TARGET") {
     Ok(target_triplet) => {
       let target_vec: Vec<&str> = target_triplet.split('-').collect();
-      
+
       let (arch_sub, os, abi) = match target_vec.as_slice() {
         [arch_sub, _vendor, os, abi] => {(arch_sub, os, abi)},
         [arch_sub, os, abi] => {(arch_sub, os, abi)},
@@ -66,7 +66,7 @@ fn main() {
 
   println!("cargo:rustc-link-lib=static=snowboy-detect");
 
-  // if want build dependency for lib, release this comment
+  // build dependency for snowboy-detect
   cc::Build::new()
   .cpp(true)
   .file("rsnowboywrapper/rsnowboy.cpp")

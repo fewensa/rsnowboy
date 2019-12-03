@@ -10,6 +10,8 @@ include = [
   "Cargo.toml",
   "**/*.rs",
   "README.md",
+  "lib",
+  "rsnowboywrapper",
   "LICENSE"
 ]
 license = "MIT"
