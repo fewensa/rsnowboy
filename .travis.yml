@@ -13,11 +13,12 @@ jobs:
     - stage: usually
       name: Package rsnowboy
       script:
-        - sudo apt-get install liboctave-dev
+        - sudo apt install -y libgsl-dev
         - cargo run --example simple
         - cargo package
     - stage: publish
       name: Publish rtdlib to crates.io
       script:
+        - sudo apt install -y libgsl-dev
         - cargo login $CRATES_TOKEN
         - cargo publish
